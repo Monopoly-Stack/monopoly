@@ -78,8 +78,7 @@ router.put('/:id', function(req, res) {
 // =============================================
 router.post('/select', function(req, res) {
     for (i = 0; i < req.body.playername.length; i++) {
-        console.log(req.body.playername[i]);
-        var playerPiece = req.body.piece[i].toLowerCase; 
+        console.log(req.body.playername[i]); 
     db.Player.create({
         player_name: req.body.playername[i],
         piece: req.body.piece[i].toLowerCase(),
